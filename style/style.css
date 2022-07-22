@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/*Main*/
+
+main{
+    width: 100%;
+    flex-grow: 1;
+    min-width: 340px;
+}
+
+#background{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#container{
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 70%;
+    border-radius: 15px;
+    border: 1px solid rgba(191, 191, 191, 0.4);
+    padding: 15px 0 15px 0;
+    margin-bottom: 25px;
+}
+
+#container h1{
+    font-size: 1.7em;
+    opacity: 0.6;
+    color: #bfbfbf;
+    font-family: sans-serif;
+    background-color: black;
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+#grid-non-steam{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 70%;
+    border-radius: 15px;
+    border: 1px solid rgba(191, 191, 191, 0.4);
+    padding: 15px 0 15px 0;
+}
+
+.item{
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    border: 1px solid rgba(191, 191, 191, 0.4);
+}
+
+/*Itens*/
+/*Geral Itens*/
+
+#grid div, #grid-non-steam div{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+} /*Fim Itens*/ /* Fim Main*/
+
+
+
+/*Footer*/
+
+footer{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.footer-boxes{
+    color: white;
+    width: 250px;
+    text-align: center;
+} 
+
+footer h3{
+    cursor: default;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+footer li{
+    font-size: 1em;
+}
+
+footer ul, footer a{
+    text-decoration: none;
+    list-style-type: none;
+    color: #bfbfbf;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+#links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13px;
+}
+
+#contato img{
+    width: 20px;
+}
+
+#youtube, #youtube img{
+    margin-top: 5px;
+    width: 80px;
+}/*Fim Footer*/
