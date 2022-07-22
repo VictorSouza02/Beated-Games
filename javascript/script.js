@@ -273,7 +273,7 @@ inicializarGrid = () => {
     games.map((val) => {
         if(val.steam===true){
             adicionarItens.innerHTML+=`
-            <div id='`+'id'+`' 
+            <div id='`+val.id+`'  
             class='item' 
             style='background-image: url(`+val.img+`);'>
             </div>
@@ -281,7 +281,7 @@ inicializarGrid = () => {
         }else{
             const adicionarNonSteam = document.getElementById('grid-non-steam')
             adicionarNonSteam.innerHTML+=`
-            <div id='`+'id'+`' 
+            <div id='`+val.id+`'  
             class='item' 
             style='background-image: url(`+val.img+`);'>
             </div>
