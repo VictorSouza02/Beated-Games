@@ -8,23 +8,6 @@ html{
         width: 75px;
         height: 100px;
     }
-
-    #youtube img{
-        width: 40px;
-    }
-
-    .footer-boxes{
-        margin-right: 20px;
-    }
-
-    footer h3{
-        font-size: 1em;
-    }
-
-    footer li{
-        font-size: 0.5em;
-        margin-bottom: 8px;
-    }
 }
 
 @media screen and (min-width:600px) and (max-width: 1200px) {
