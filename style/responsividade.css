@@ -5,8 +5,8 @@ html{
 
 @media screen and (max-width: 549px) {
     #container .item{
-        width: 125px;
-        height: 225px;
+        width: 120px;
+        height: 220px;
     }
 
     #container .carta-costas-descricao h2{
