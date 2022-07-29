@@ -4,6 +4,10 @@ html{
 }
 
 @media screen and (max-width: 549px) {
+    #container #grid{
+        width: 90%;
+    }
+    
     #container .item{
         width: 100px;
         height: 200px;
