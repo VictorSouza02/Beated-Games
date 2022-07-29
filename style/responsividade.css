@@ -10,15 +10,25 @@ html{
     
     #container .item{
         width: 100px;
-        height: 200px;
+        height: 150px;
     }
 
     #container .carta-costas-descricao h2{
+        margin-bottom: 5%;
         font-size: 0.6em;
     }
 
     #container .carta-costas-descricao p{
         font-size: 0.5em;
+    }
+
+    #container .carta-costas img {
+        margin-top: 5%;
+        margin-bottom: 3%;
+      }
+
+    #container .carta-costas-beated{
+        margin-top: 3%;
     }
 }
 
