@@ -1,57 +1,18 @@
-html{
+html {
     min-width: 150px;
     min-height: 300px;
 }
 
-@media screen and (max-width: 549px) {
-    #container #grid{
-        width: 75%;
-    }
-    
-    #container .item{
-        width: 100px;
-        height: 150px;
+@media screen and (min-width: 768px) {
+    .game-card {
+        width: 20%;
+        height: 200px;
     }
 
-    #container .carta-costas-descricao h2{
-        margin-bottom: 5%;
-        font-size: 0.6em;
-    }
-
-    #container .carta-costas-descricao p{
-        font-size: 0.5em;
-    }
-
-    #container .carta-costas img {
-        margin-top: 5%;
-        margin-bottom: 3%;
-      }
-
-    #container .carta-costas-beated{
-        margin-top: 3%;
+    .back-side-description h2{
+        font-size: 0.7em;
     }
 }
 
-@media screen and (min-width:549px) and (max-width: 1200px) {
-    #container .item{
-        width: 150px;
-        height: 250px;
-    }
-
-    #container .carta-costas-descricao h2{
-        font-size: 0.9em;
-    }
-
-    #container .carta-costas-descricao p{
-        font-size: 0.8em;
-    }
+@media screen and (min-width:992px) {
 }
-
-
-/*removido*/
-/* Não exibir tooltip em telas menores
-@media screen and (max-width: 1200px) {
-    .tooltip, .tooltip-icon{
-        display: none;
-    }
-} */

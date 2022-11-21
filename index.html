@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/responsividade.css">
+
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsividade.css">
+
     <link rel="icon" href="img/icons/deathb4t.gif">
     <title>Beated Games</title>
 </head>
@@ -16,54 +17,26 @@
     <main>
 
         <!--BACKGROUND-->
-        <video autoplay muted loop id="background">
+        <video id="background-video" autoplay muted loop >
             <source src="video/black-hole.mp4">
         </video>
 
         <div id="container">
 
-            <section id="grid">
+            <section id="steam-grid">
             </section>
 
-            <h1 id="divisor-section">Non-Steam</h1>
+            <h1 id="section-divider">Non-Steam</h1>
 
-            <section id="grid-non-steam">
+            <section id="non-steam-grid">
             </section>
         </div>
     </main>
 
     <footer>
-        <section id="Inicio" class="footer-boxes">
-            <h3>Inicio</h3>
-            <ul>
-                <li><a href="">Home</a></li>
-            </ul>
-        </section>
-
-        <section id="Sobre" class="footer-boxes">
-            <h3>Sobre</h3>
-            <ul>
-                <li><a href="">Beated Games</a></li>
-                <li><a href="https://steamcommunity.com/id/deathb4t" target="_blank">Steam</a></li>
-            </ul>
-        </section>
-
-        <section id="contato" class="footer-boxes">
-            <h3>Contato</h3>
-            <ul>
-                <li><a href="mailto:victorbatistasouza2002@gmail.com"><img src="img/icons/mail-logo.png"></a></li>
-                <li><a href="https://www.linkedin.com/in/victorsouza02/" target="_blank"><img src="img/icons/linkedin-logo.png"></a></li>
-                <li><a href="https://github.com/VictorSouza02" target="_blank"><img src="img/icons/github-logo.png"></a></li>
-            </ul>
-        </section>
-
-        <section id="youtube">
-            <a href="https://www.youtube.com/channel/UCp358iZJ17x93pZ7OcRADQw" target="_blank"><img src="img/icons/youtube-logo.png" alt=""></a>
-        </section>
-
 
     </footer>
 
-    <script src="javascript/script.js"></script>
+    <script type="module" src="javascript/script.js"></script>
 </body>
 </html>
