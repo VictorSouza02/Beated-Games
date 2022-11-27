@@ -692,6 +692,27 @@
 					"icone": "img/games/icon/minecraft.png"
 				}
 			]
+		},
+		{
+			"nome": "Red Dead Redemption 2",
+			"id": "1174180",
+			"Desenvolvedora": "Rockstar Games",
+			"dataDeLancamento": "05/12/2019",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "11/2022",
+					"horas": "34"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/red-dead-redemption-2.jpg",
+					"bannerBlur": "img/games/banner/blur/red-dead-redemption-2.jpg",
+					"header": "img/games/header/red-dead-redemption-2.jpg",
+					"icone": "img/games/icon/red-dead-redemption-2.png"
+				}
+			]
 		}
 	]
 }
