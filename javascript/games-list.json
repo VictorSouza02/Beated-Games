@@ -713,6 +713,27 @@
 					"icone": "img/games/icon/red-dead-redemption-2.jpg"
 				}
 			]
+		},
+		{
+			"nome": "Call of Duty: Modern Warfare 2 (2009)",
+			"id": "10180",
+			"Desenvolvedora": "Infinity Ward",
+			"dataDeLancamento": "12/11/2009",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "12/2022",
+					"horas": "4.7"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/call-of-duty-modern-warfare-2-2009.jpg",
+					"bannerBlur": "img/games/banner/blur/call-of-duty-modern-warfare-2-2009.jpg",
+					"header": "img/games/header/call-of-duty-modern-warfare-2-2009.jpg",
+					"icone": "img/games/icon/call-of-duty-modern-warfare-2-2009.jpg"
+				}
+			]
 		}
 	]
 }
