@@ -734,6 +734,27 @@
 					"icone": "img/games/icon/call-of-duty-modern-warfare-2-2009.jpg"
 				}
 			]
+		},
+		{
+			"nome": "Need for Speed™ Payback",
+			"id": "1262580",
+			"Desenvolvedora": "Ghost Games",
+			"dataDeLancamento": "06/11/2017",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "12/2022",
+					"horas": "15.5"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/need-for-speed-payback.jpg",
+					"bannerBlur": "img/games/banner/blur/need-for-speed-payback.jpg.jpg",
+					"header": "img/games/header/need-for-speed-payback.jpg.jpg",
+					"icone": "img/games/icon/need-for-speed-payback.jpg.jpg"
+				}
+			]
 		}
 	]
 }
