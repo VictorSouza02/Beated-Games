@@ -750,9 +750,30 @@
 			"fotos": [
 				{
 					"banner": "img/games/banner/need-for-speed-payback.jpg",
-					"bannerBlur": "img/games/banner/blur/need-for-speed-payback.jpg.jpg",
-					"header": "img/games/header/need-for-speed-payback.jpg.jpg",
+					"bannerBlur": "img/games/banner/blur/need-for-speed-payback.jpg",
+					"header": "img/games/header/need-for-speed-payback.jpg",
 					"icone": "img/games/icon/need-for-speed-payback.jpg"
+				}
+			]
+		},
+		{
+			"nome": "The Witcher® 3: Wild Hunt",
+			"id": "292030",
+			"Desenvolvedora": "CD PROJEKT RED",
+			"dataDeLancamento": "18/03/2015",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "12/2022",
+					"horas": "34"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/the-witcher-3.jpg",
+					"bannerBlur": "img/games/banner/blur/the-witcher-3.jpg",
+					"header": "img/games/header/the-witcher-3.jpg",
+					"icone": "img/games/icon/the-witcher-3.jpg"
 				}
 			]
 		}
