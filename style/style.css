@@ -1,18 +1,18 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#background-video{
+#background-video {
   position: fixed;
 }
 
-#container{
+#container {
   color: #fff;
 
   width: 90%;
@@ -29,23 +29,35 @@ body{
 
 
 /* INSIDE SECTIONS*/
-main section{
+main section {
   width: 100%;
 
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
   justify-content: center;
-  column-gap: 2.5%;
+  gap: 2.5%;
 }
 
 .game-card {
   margin-bottom: 2.5%;
 
   width: 48.75%;
-  height: 260px;
+  aspect-ratio: 1/1.5;
 
   perspective: 1000px;
+}
+
+@media (min-width: 768px) {
+  .game-card {
+    width: 31.5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .game-card {
+    width: 20%;
+  }
 }
 
 .internal-card {
@@ -56,21 +68,26 @@ main section{
   transform-style: preserve-3d;
 }
 
-.game-card:hover .internal-card {
-  transform: rotateY(180deg);
+@media (min-width: 540px) {
+  .game-card:hover .internal-card {
+    transform: rotateY(180deg);
+  }
 }
 
 .back-side,
 .front-side {
   position: absolute;
   backface-visibility: hidden;
-  
+
   width: 100%;
   height: 100%;
   border-radius: 16px;
 
+  background-color: white;
+
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -79,24 +96,25 @@ main section{
   overflow: hidden;
 }
 
-.back-side-description{
+.back-side-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.back-side-description img{
+.back-side-description img {
   width: 15%;
   margin-top: 3%;
   margin-bottom: 3%;
 }
 
-.back-side-description .text-bg, .back-side-description .text-bg{
+.back-side-description .text-bg,
+.back-side-description .text-bg {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.back-side-description h2{
+.back-side-description h2 {
   padding: 2.5px;
   width: 100%;
   margin-bottom: 2%;
@@ -107,7 +125,7 @@ main section{
 
 }
 
-.back-side-description p{
+.back-side-description p {
   width: 100%;
 
   text-align: center;
@@ -115,7 +133,7 @@ main section{
   text-shadow: 3px 3px 10px black;
 }
 
-.back-side-beated{
+.back-side-beated {
   width: 75%;
   aspect-ratio: 1/0.7;
   border-radius: 8px;
@@ -151,14 +169,14 @@ main section{
 
 /*END INSIDE SECTIONS*/
 
-#section-divider{
-    width: 55%;
+#section-divider {
+  width: 55%;
 
-    margin: 5% auto;
-    text-align: center;
-    padding: 10px 0;
+  margin: 5% auto;
+  text-align: center;
+  padding: 10px 0;
 
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 9px rgba(271, 271, 271, 0.2);
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 9px rgba(271, 271, 271, 0.2);
 }
