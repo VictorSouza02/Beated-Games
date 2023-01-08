@@ -1,2 +1,2 @@
 # Beated-Games
- Um site para organizar jogos que "zerei"!
+a site to organize the games I beat!

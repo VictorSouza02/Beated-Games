@@ -22,7 +22,7 @@ const inicializarGrid = () => {
                                 <img src="img/icons/steam-icon.svg">
                                 <h2>Beated Game</h2> 
                                 <p><s>`+ val['beatInfo'][0]['data'] + `</s></p>
-                                <p>`+ val['beatInfo'][0]['horas'] + ` horas</p>
+                                <p>`+ val['beatInfo'][0]['horas'] + ` hours</p>
                                 <br>
                             </div>
                         </div>
