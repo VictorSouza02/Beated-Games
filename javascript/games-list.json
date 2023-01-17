@@ -776,6 +776,27 @@
 					"icone": "img/games/icon/the-witcher-3.jpg"
 				}
 			]
+		},
+		{
+			"nome": "Plants vs. Zombies",
+			"id": "3590",
+			"Desenvolvedora": "PopCap Games",
+			"dataDeLancamento": "05/05/2009",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "01/2023",
+					"horas": "6.8"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/plants-vs-zombies.jpg",
+					"bannerBlur": "img/games/banner/blur/plants-vs-zombies.jpg",
+					"header": "img/games/header/plants-vs-zombies.jpg",
+					"icone": "img/games/icon/plants-vs-zombies.jpg"
+				}
+			]
 		}
 	]
 }

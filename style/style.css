@@ -94,12 +94,14 @@ main section {
 .back-side {
   transform: rotateY(180deg);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .back-side-description {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
