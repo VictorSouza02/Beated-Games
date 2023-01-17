@@ -21,7 +21,7 @@ const inicializarGrid = () => {
                             <div class="back-side-beated">
                                 <img src="img/icons/steam-icon.svg">
                                 <h2>Beated Game</h2> 
-                                <p><s>`+ val['beatInfo'][0]['data'] + `</s></p>
+                                <p>`+ val['beatInfo'][0]['data'] + `</p>
                                 <p>`+ val['beatInfo'][0]['horas'] + ` hours</p>
                                 <br>
                             </div>
@@ -47,7 +47,7 @@ const inicializarGrid = () => {
                             <div class="back-side-beated">
                                 <img src="` + val['fotos'][0]['icone'] + `">
                                 <h2>Beated Game</h2> 
-                                <p><s>`+ val['beatInfo'][0]['data'] + `</s></p>
+                                <p>`+ val['beatInfo'][0]['data'] + `</p>
                                 <p>`+ val['beatInfo'][0]['horas'] + ` horas</p>
                                 <br>
                             </div>

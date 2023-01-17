@@ -90,7 +90,6 @@ main section {
   background-repeat: no-repeat;
 }
 
-
 .back-side {
   transform: rotateY(180deg);
   overflow: hidden;
