@@ -16,7 +16,7 @@ const inicializarGrid = () => {
                         <div class="back-side-description">
                         <img src="`+ val['fotos'][0]['icone'] + `">
                         <h2 class="text-bg">`+ val['nome'] + `</h2> 
-                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>`+ val['dataDeLancamento'] + `</p>
+                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>` + val['dataDeLancamento'] + `</p>
 
                             <div class="back-side-beated">
                                 <img src="img/icons/steam-icon.svg">
@@ -29,8 +29,8 @@ const inicializarGrid = () => {
                     </div>
                 </div>
             </div>`;
-        } 
-        
+        }
+
         else {
             const adicionarNonSteam = document.getElementById('non-steam-grid')
             adicionarNonSteam.innerHTML += `
@@ -42,7 +42,7 @@ const inicializarGrid = () => {
                         <div class="back-side-description">
                         <img src="`+ val['fotos'][0]['icone'] + `">
                         <h2 class="text-bg">`+ val['nome'] + `</h2> 
-                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>`+ val['dataDeLancamento'] + `</p>
+                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>` + val['dataDeLancamento'] + `</p>
 
                             <div class="back-side-beated">
                                 <img src="` + val['fotos'][0]['icone'] + `">
