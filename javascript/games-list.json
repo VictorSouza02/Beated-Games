@@ -316,6 +316,27 @@
 			]
 		},
 		{
+			"nome": "Street Racing Syndicate",
+			"id": "292410",
+			"Desenvolvedora": "Eutechnyx",
+			"dataDeLancamento": "08/01/2009",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "07/2021",
+					"horas": "4"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/street-racing-syndicate.jpg",
+					"bannerBlur": "img/games/banner/blur/street-racing-syndicate.jpg",
+					"header": "img/games/header/street-racing-syndicate.jpg",
+					"icone": "img/games/icon/street-racing-syndicate.jpg"
+				}
+			]
+		},
+		{
 			"nome": "Grand Theft Auto V",
 			"id": "271590",
 			"Desenvolvedora": "Rockstar North",
