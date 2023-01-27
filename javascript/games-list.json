@@ -818,6 +818,27 @@
 					"icone": "img/games/icon/plants-vs-zombies.jpg"
 				}
 			]
+		},
+		{
+			"nome": "Grand Theft Auto: San Andreas",
+			"id": "12120",
+			"Desenvolvedora": "Rockstar Games",
+			"dataDeLancamento": "06/06/2005",
+			"steam": true,
+			"beatInfo": [
+				{
+					"data": "01/2023",
+					"horas": "12.8"
+				}
+			],
+			"fotos": [
+				{
+					"banner": "img/games/banner/grand-theft-auto-sa.jpg",
+					"bannerBlur": "img/games/banner/blur/grand-theft-auto-sa.jpg",
+					"header": "img/games/header/grand-theft-auto-sa.jpg",
+					"icone": "img/games/icon/grand-theft-auto-sa.jpg"
+				}
+			]
 		}
 	]
 }
