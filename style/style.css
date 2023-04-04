@@ -90,12 +90,17 @@ main section {
   background-repeat: no-repeat;
 }
 
+.front-side{
+  cursor: pointer;
+}
+
 .back-side {
   transform: rotateY(180deg);
   overflow: hidden;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  cursor: default;
 }
 
 .back-side-description {

@@ -5,24 +5,24 @@ import lista from './games-list.json' assert {type: 'json'}
 /* Adicionar itens */
 const inicializarGrid = () => {
     const adicionarItens = document.getElementById('steam-grid')
-    lista['games'].map((val) => {
+    lista.map((val) => {
         if (val['steam'] === true) {
             adicionarItens.innerHTML += `
             <div id="`+ val['id'] + `" class="game-card">
                 <div class="internal-card">
-                    <div class="front-side" style="background-image: url(`+ val['fotos'][0]['banner'] + `);"></div>
+                    <div class="front-side" style="background-image: url(`+ val['photos'][0]['banner'] + `);"></div>
                             
-                    <div class="back-side" style="background-image: url(`+ val['fotos'][0]['bannerBlur'] + `);">
+                    <div class="back-side" style="background-image: url(`+ val['photos'][0]['bannerBlur'] + `);">
                         <div class="back-side-description">
-                        <img src="`+ val['fotos'][0]['icone'] + `">
-                        <h2 class="text-bg">`+ val['nome'] + `</h2> 
-                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>` + val['dataDeLancamento'] + `</p>
+                        <img src="`+ val['photos'][0]['icon'] + `">
+                        <h2 class="text-bg">`+ val['name'] + `</h2> 
+                        <p class="text-bg">`+ val['developer'] + `<br>` + val['releaseDate'] + `</p>
 
                             <div class="back-side-beated">
                                 <img src="img/icons/steam-icon.svg">
                                 <h2>Beated Game</h2> 
-                                <p>`+ val['beatInfo'][0]['data'] + `</p>
-                                <p>`+ val['beatInfo'][0]['horas'] + ` hours</p>
+                                <p>`+ val['beatInfo'][0]['date'] + `</p>
+                                <p>`+ val['beatInfo'][0]['hours'] + ` hours</p>
                                 <br>
                             </div>
                         </div>
@@ -36,19 +36,19 @@ const inicializarGrid = () => {
             adicionarNonSteam.innerHTML += `
             <div id="`+ val['id'] + `" class="game-card">
                 <div class="internal-card">
-                    <div class="front-side" style="background-image: url(`+ val['fotos'][0]['banner'] + `);"></div>
+                    <div class="front-side" style="background-image: url(`+ val['photos'][0]['banner'] + `);"></div>
                             
-                    <div class="back-side" style="background-image: url(`+ val['fotos'][0]['bannerBlur'] + `);">
+                    <div class="back-side" style="background-image: url(`+ val['photos'][0]['bannerBlur'] + `);">
                         <div class="back-side-description">
-                        <img src="`+ val['fotos'][0]['icone'] + `">
-                        <h2 class="text-bg">`+ val['nome'] + `</h2> 
-                        <p class="text-bg">`+ val['Desenvolvedora'] + `<br>` + val['dataDeLancamento'] + `</p>
+                        <img src="`+ val['photos'][0]['icon'] + `">
+                        <h2 class="text-bg">`+ val['name'] + `</h2> 
+                        <p class="text-bg">`+ val['developer'] + `<br>` + val['releaseDate'] + `</p>
 
                             <div class="back-side-beated">
-                                <img src="` + val['fotos'][0]['icone'] + `">
+                                <img src="` + val['photos'][0]['icon'] + `">
                                 <h2>Beated Game</h2> 
-                                <p>`+ val['beatInfo'][0]['data'] + `</p>
-                                <p>`+ val['beatInfo'][0]['horas'] + ` horas</p>
+                                <p>`+ val['beatInfo'][0]['date'] + `</p>
+                                <p>`+ val['beatInfo'][0]['hours'] + ` horas</p>
                                 <br>
                             </div>
                         </div>
