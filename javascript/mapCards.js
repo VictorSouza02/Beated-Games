@@ -19,7 +19,6 @@ const inicializarGrid = () => {
                         <p class="text-bg">`+ val['developer'] + `<br>` + val['releaseDate'] + `</p>
 
                             <div class="back-side-beated">
-                                <img src="img/icons/steam-icon.svg">
                                 <h2>Beated Game</h2> 
                                 <p>`+ val['beatInfo'][0]['date'] + `</p>
                                 <p>`+ val['beatInfo'][0]['hours'] + ` hours</p>
@@ -45,7 +44,6 @@ const inicializarGrid = () => {
                         <p class="text-bg">`+ val['developer'] + `<br>` + val['releaseDate'] + `</p>
 
                             <div class="back-side-beated">
-                                <img src="` + val['photos'][0]['icon'] + `">
                                 <h2>Beated Game</h2> 
                                 <p>`+ val['beatInfo'][0]['date'] + `</p>
                                 <p>`+ val['beatInfo'][0]['hours'] + ` horas</p>
