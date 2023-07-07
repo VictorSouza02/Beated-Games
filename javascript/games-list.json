@@ -880,5 +880,47 @@
 				"icon": "media/games/icon/half-life-2.jpg"
 			}
 		]
+	},
+  {
+		"name": "Max Payne",
+		"id": "12140",
+		"developer": "Remedy Entertainment",
+		"releaseDate": "25/07/2001",
+		"steam": true,
+		"beatInfo": [
+			{
+				"date": "06/2023",
+				"hours": "7.4"
+			}
+		],
+		"photos": [
+			{
+				"banner": "media/games/banner/max-payne.jpg",
+				"bannerBlur": "media/games/banner/blur/max-payne.jpg",
+				"header": "media/games/header/max-payne.jpg",
+				"icon": "media/games/icon/max-payne.jpg"
+			}
+		]
+	},
+  {
+		"name": "Horizon Chase Turbo",
+		"id": "389140",
+		"developer": "AQUIRIS",
+		"releaseDate": "15/05/2018",
+		"steam": true,
+		"beatInfo": [
+			{
+				"date": "07/2023",
+				"hours": "10.1"
+			}
+		],
+		"photos": [
+			{
+				"banner": "media/games/banner/horizon-chase-turbo.jpg",
+				"bannerBlur": "media/games/banner/blur/horizon-chase-turbo.jpg",
+				"header": "media/games/header/horizon-chase-turbo.jpg",
+				"icon": "media/games/icon/horizon-chase-turbo.jpg"
+			}
+		]
 	}
 ]
