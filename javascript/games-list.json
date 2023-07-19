@@ -922,5 +922,26 @@
 				"icon": "media/games/icon/horizon-chase-turbo.jpg"
 			}
 		]
+	},
+  {
+		"name": "Manhunt",
+		"id": "12130",
+		"developer": "Rockstar North",
+		"releaseDate": "20/04/2004",
+		"steam": true,
+		"beatInfo": [
+			{
+				"date": "07/2023",
+				"hours": "9.2"
+			}
+		],
+		"photos": [
+			{
+				"banner": "media/games/banner/manhunt.jpg",
+				"bannerBlur": "media/games/banner/blur/manhunt.jpg",
+				"header": "media/games/header/manhunt.jpg",
+				"icon": "media/games/icon/manhunt.jpg"
+			}
+		]
 	}
 ]
