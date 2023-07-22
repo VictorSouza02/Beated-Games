@@ -943,5 +943,26 @@
 				"icon": "media/games/icon/manhunt.jpg"
 			}
 		]
-	}
+	},
+  {
+    "name": "LEGO® Star Wars™ - The Complete Saga",
+    "id": "32440",
+    "developer": "Traveller's Tales",
+    "releaseDate": "12/11/2009",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "07/2023",
+        "hours": "13.5"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/lego-star-wars-complete-saga.jpg",
+        "bannerBlur": "media/games/banner/blur/lego-star-wars-complete-saga.jpg",
+        "header": "media/games/header/lego-star-wars-complete-saga.jpg",
+        "icon": "media/games/icon/lego-star-wars-complete-saga.jpg"
+      }
+    ]
+  }
 ]
