@@ -964,5 +964,26 @@
         "icon": "media/games/icon/lego-star-wars-complete-saga.jpg"
       }
     ]
+  },
+  {
+    "name": "Assassin's Creed™",
+    "id": "15100",
+    "developer": "Ubisoft Montreal",
+    "releaseDate": "09/04/2009",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "08/2023",
+        "hours": "12.3"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/assassins-creed.jpg",
+        "bannerBlur": "media/games/banner/blur/assassins-creed.jpg",
+        "header": "media/games/header/assassins-creed.jpg",
+        "icon": "media/games/icon/assassins-creed.jpg"
+      }
+    ]
   }
 ]
