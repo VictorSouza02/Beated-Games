@@ -985,5 +985,26 @@
         "icon": "media/games/icon/assassins-creed.jpg"
       }
     ]
+  },
+  {
+    "name": "Akane",
+    "id": "884260",
+    "developer": "Ludic Studios",
+    "releaseDate": "10/09/2018",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "10/2023",
+        "hours": "2.5"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/akane.jpg",
+        "bannerBlur": "media/games/banner/blur/akane.jpg",
+        "header": "media/games/header/akane.jpg",
+        "icon": "media/games/icon/akane.jpg"
+      }
+    ]
   }
 ]
