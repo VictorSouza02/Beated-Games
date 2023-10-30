@@ -1006,5 +1006,26 @@
         "icon": "media/games/icon/akane.jpg"
       }
     ]
+  },
+  {
+    "name": "Call of Duty®: Modern Warfare® II",
+    "id": "1962660",
+    "developer": "Infinity Ward",
+    "releaseDate": "28/10/2022",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "10/2023",
+        "hours": "5.2"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/callOfDutyModernWarfareII.png",
+        "bannerBlur": "media/games/banner/blur/callOfDutyModernWarfareII.jpg",
+        "header": "media/games/header/callOfDutyModernWarfareII.jpg",
+        "icon": "media/games/icon/callOfDutyModernWarfareII.jpg"
+      }
+    ]
   }
 ]
