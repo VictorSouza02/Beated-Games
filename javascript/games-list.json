@@ -1027,5 +1027,26 @@
         "icon": "media/games/icon/callOfDutyModernWarfareII.jpg"
       }
     ]
+  },
+  {
+    "name": "Marvel's Spider-Man Remastered",
+    "id": "1817070",
+    "developer": "Insomniac Games",
+    "releaseDate": "12/08/2022",
+    "steam": false,
+    "beatInfo": [
+      {
+        "date": "11/2023",
+        "hours": "9"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/SpiderManRemastered.jpg",
+        "bannerBlur": "media/games/banner/blur/SpiderManRemastered.jpg",
+        "header": "media/games/header/SpiderManRemastered.jpg",
+        "icon": "media/games/icon/SpiderManRemastered.png"
+      }
+    ]
   }
 ]
