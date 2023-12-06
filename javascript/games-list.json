@@ -1048,5 +1048,26 @@
         "icon": "media/games/icon/SpiderManRemastered.png"
       }
     ]
+  },
+  {
+    "name": "Pokémon FireRed",
+    "id": "4",
+    "developer": "Game Freak",
+    "releaseDate": "29/01/2004",
+    "steam": false,
+    "beatInfo": [
+      {
+        "date": "12/2023",
+        "hours": "20"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/pokemonFireRed.png",
+        "bannerBlur": "media/games/banner/blur/pokemonFireRed.png",
+        "header": "media/games/header/pokemonFireRed.png",
+        "icon": "media/games/icon/pokemon.png"
+      }
+    ]
   }
 ]
