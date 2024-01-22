@@ -1069,5 +1069,26 @@
         "icon": "media/games/icon/pokemon.png"
       }
     ]
+  },
+  {
+    "name": "The Forest",
+    "id": "242760",
+    "developer": "Endnight Games Ltd",
+    "releaseDate": "30/04/2018",
+    "steam": false,
+    "beatInfo": [
+      {
+        "date": "01/2024",
+        "hours": "21"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/theForest.jpg",
+        "bannerBlur": "media/games/banner/blur/theForest.jpg",
+        "header": "media/games/header/theForest.jpg",
+        "icon": "media/games/icon/theForest.jpg"
+      }
+    ]
   }
 ]
