@@ -1132,5 +1132,26 @@
         "icon": "media/games/icon/sniperElite4.jpg"
       }
     ]
+  },
+  {
+    "name": "Stardew Valley",
+    "id": "413150",
+    "developer": "ConcernedApe",
+    "releaseDate": "26/02/2016",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "05/2024",
+        "hours": "31.8"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/stardewValley.jpg",
+        "bannerBlur": "media/games/banner/blur/stardewValley.jpg",
+        "header": "media/games/header/stardewValley.jpg",
+        "icon": "media/games/icon/stardewValley.jpg"
+      }
+    ]
   }
 ]
