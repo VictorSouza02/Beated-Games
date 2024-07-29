@@ -1153,5 +1153,26 @@
         "icon": "media/games/icon/stardewValley.jpg"
       }
     ]
+  },
+  {
+    "name": "Mortal Shell",
+    "id": "1110910",
+    "developer": "Cold Symmetry",
+    "releaseDate": "18/08/2021",
+    "steam": true,
+    "beatInfo": [
+      {
+        "date": "07/2024",
+        "hours": "8.8"
+      }
+    ],
+    "photos": [
+      {
+        "banner": "media/games/banner/mortalShell.jpg",
+        "bannerBlur": "media/games/banner/blur/mortalShell.jpg",
+        "header": "media/games/header/mortalShell.jpg",
+        "icon": "media/games/icon/mortalShell.jpg"
+      }
+    ]
   }
 ]

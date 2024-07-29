@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./media/favicon.ico" type="image/x-icon" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./media/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="style/style.css">
-
-    <link rel="icon" href="img/icons/deathb4t.gif">
+    <link rel="stylesheet" href="style/style.css" />
     <title>DeathB4t - Beated Games</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <main>
+      <video id="background-video" autoplay muted loop>
+        <source src="video/black-hole.mp4" />
+      </video>
 
-        <!--BACKGROUND-->
-        <video id="background-video" autoplay muted loop>
-            <source src="video/black-hole.mp4">
-        </video>
-
-        <div id="container">
-        </div>
+      <div id="container"></div>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script type="module" src="javascript/mapCards.js"></script>
-</body>
-
+  </body>
 </html>
