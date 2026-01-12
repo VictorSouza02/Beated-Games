@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./media/favicon.ico" type="image/x-icon" />
 
+    <link rel="stylesheet" href="style/normalize.css" />
     <link rel="stylesheet" href="style/style.css" />
 
     <title>DeathB4t - Beated Games</title>
@@ -21,7 +22,14 @@
         <source src="video/black-hole.mp4" />
       </video>
 
-      <div id="container"></div>
+      <header id="header">
+        <h1>Beated Games</h1>
+        <p id="stats"></p>
+      </header>
+
+      <div id="container">
+        <div id="infinite-scroll-sentinel" aria-hidden="true"></div>
+      </div>
     </main>
 
     <footer></footer>
