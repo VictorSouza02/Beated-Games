@@ -191,13 +191,6 @@ main {
   flex: 1;
 }
 
-.back-side-subtitle {
-  margin: 2px 0 0;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
 .back-side-details {
   flex: 1;
   min-height: 0;
