@@ -511,5 +511,14 @@
     "beatHours": "22.7",
     "banner": "media/games/the-last-of-us-part-ii-banner.webp",
     "icon": "media/games/the-last-of-us-part-ii-logo.webp"
+  },
+  {
+    "name": "Max Payne 2: The Fall of Max Payne",
+    "developer": "Remedy Entertainment",
+    "releaseDate": "14/10/2003",
+    "beatDate": "03/2026",
+    "beatHours": "4.7",
+    "banner": "media/games/max-payne-2-banner.webp",
+    "icon": "media/games/max-payne-2-logo.webp"
   }
 ]
