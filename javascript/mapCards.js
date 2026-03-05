@@ -126,7 +126,6 @@ const renderCard = (game, index, staggerIndex = 0) => {
             <img class="back-side-logo" src="${icon}" alt="${logoAlt}"${imgAttrs}>
             <div class="back-side-title-wrap">
               <h2 class="back-side-title">${name}</h2>
-              <p class="back-side-subtitle">${releaseDate}</p>
             </div>
           </div>
         </div>
