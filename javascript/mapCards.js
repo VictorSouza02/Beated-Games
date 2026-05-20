@@ -4,14 +4,14 @@ const PAGE_SIZE = 12;
 let renderedCount = 0;
 
 function escapeHtml(str) {
-  if (str == null) return '';
+  if (str == null) return "";
   const s = String(str);
   return s
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function parseBeatDate(beatDateStr) {
@@ -25,34 +25,36 @@ function preloadFirstBanner() {
   if (gamesList.length === 0) return;
   const first = gamesList[0];
   if (!first || !first.banner) return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.as = 'image';
+  const link = document.createElement("link");
+  link.rel = "preload";
+  link.as = "image";
   link.href = first.banner;
   document.head.appendChild(link);
 }
 
 const loadJSON = async () => {
   try {
-    const response = await fetch('./javascript/games-list.json');
-    if (!response.ok) throw new Error('Failed to load JSON');
+    const response = await fetch("./javascript/games-list.json");
+    if (!response.ok) throw new Error("Failed to load JSON");
     const data = await response.json();
-    gamesList = data.sort((a, b) => parseBeatDate(b.beatDate) - parseBeatDate(a.beatDate));
+    gamesList = data.sort(
+      (a, b) => parseBeatDate(b.beatDate) - parseBeatDate(a.beatDate),
+    );
     preloadFirstBanner();
     initializeGrid();
   } catch (error) {
-    console.error('Error loading JSON:', error);
+    console.error("Error loading JSON:", error);
   }
 };
 
 function getSentinel() {
-  return document.getElementById('scroll-sentinel');
+  return document.getElementById("scroll-sentinel");
 }
 
 function createSentinel() {
-  const sentinel = document.createElement('div');
-  sentinel.id = 'scroll-sentinel';
-  sentinel.className = 'scroll-sentinel';
+  const sentinel = document.createElement("div");
+  sentinel.id = "scroll-sentinel";
+  sentinel.className = "scroll-sentinel";
   return sentinel;
 }
 
@@ -60,8 +62,8 @@ function loadMore(container) {
   const start = renderedCount;
   const end = Math.min(start + PAGE_SIZE, gamesList.length);
   for (let i = start; i < end; i++) {
-    const placeholder = document.createElement('div');
-    placeholder.classList.add('game-card-placeholder');
+    const placeholder = document.createElement("div");
+    placeholder.classList.add("game-card-placeholder");
     placeholder.dataset.index = String(i);
     const sentinel = getSentinel();
     container.insertBefore(placeholder, sentinel);
@@ -78,8 +80,18 @@ function loadMore(container) {
 }
 
 const MONTHS_EN = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 function formatBeatDateEn(beatDateStr) {
@@ -90,9 +102,25 @@ function formatBeatDateEn(beatDateStr) {
   return `${monthName} - ${year}`;
 }
 
+function hasPlatinum(game) {
+  return game.platinum != null && typeof game.platinum === "object";
+}
+
+function renderPlatinumFrame(innerHtml) {
+  return `
+    <div class="platinum-shell">
+      <div class="platinum-shell__bg-glow" aria-hidden="true"></div>
+      <div class="platinum-shell__content">${innerHtml}</div>
+      <div class="platinum-shell__frame" aria-hidden="true">
+        <div class="platinum-shell__glow"></div>
+        <div class="platinum-shell__electric"></div>
+      </div>
+    </div>`;
+}
+
 const initializeGrid = () => {
-  const container = document.getElementById('container');
-  container.innerHTML = '';
+  const container = document.getElementById("container");
+  container.innerHTML = "";
   renderedCount = 0;
   loadMore(container);
   const sentinel = createSentinel();
@@ -109,14 +137,37 @@ const renderCard = (game, index, staggerIndex = 0) => {
   const beatHours = escapeHtml(game.beatHours);
   const banner = escapeHtml(game.banner);
   const icon = escapeHtml(game.icon);
+  const isPlatinum = hasPlatinum(game);
+  const platinumDateEsc = isPlatinum
+    ? escapeHtml(formatBeatDateEn(game.platinum.date))
+    : "";
+  const platinumHoursEsc = isPlatinum
+    ? escapeHtml(
+        `${game.beatHours} hours - ${game.platinum.hours} hours (100%)`,
+      )
+    : "";
   const isFirst = index === 0;
   const imgAttrs = isFirst
     ? ' width="40" height="40" fetchpriority="high"'
     : ' width="40" height="40"';
-  const logoAlt = name ? `${name} logo` : '';
+  const logoAlt = name ? `${name} logo` : "";
   const ariaLabel = `Ver detalhes de ${name}`;
-  return `
-  <div id="game-${index}" class="game-card" data-stagger="${staggerIndex}" style="transition-delay: ${staggerIndex * 50}ms;" role="button" tabindex="0" aria-label="${ariaLabel}">
+  const completionSection = isPlatinum
+    ? `
+          <div class="back-side-platinum">
+            <div class="back-side-platinum-shine"></div>
+            <span class="back-side-platinum-badge">Platinum</span>
+            <span class="back-side-platinum-date">${platinumDateEsc}</span>
+            <span class="back-side-platinum-hours">${platinumHoursEsc}</span>
+          </div>`
+    : `
+          <div class="back-side-beated">
+            <div class="back-side-beated-shine"></div>
+            <span class="back-side-beated-label">Beated</span>
+            <span class="back-side-beated-date">${beatDateEsc}</span>
+            <span class="back-side-beated-hours">${beatHours} hours</span>
+          </div>`;
+  const internalCard = `
     <div class="internal-card">
       <div class="front-side" style="background-image: url(${banner});"></div>
       <div class="back-side">
@@ -138,15 +189,17 @@ const renderCard = (game, index, staggerIndex = 0) => {
             <span class="back-side-detail-label">Release</span>
             <span class="back-side-detail-value">${releaseDate}</span>
           </div>
-          <div class="back-side-beated">
-            <div class="back-side-beated-shine"></div>
-            <span class="back-side-beated-label">Beated</span>
-            <span class="back-side-beated-date">${beatDateEsc}</span>
-            <span class="back-side-beated-hours">${beatHours} hours</span>
-          </div>
+          ${completionSection}
         </div>
       </div>
-    </div>
+    </div>`;
+  const cardBody = isPlatinum
+    ? renderPlatinumFrame(internalCard)
+    : internalCard;
+  const cardClass = isPlatinum ? "game-card game-card--platinum" : "game-card";
+  return `
+  <div id="game-${index}" class="${cardClass}" data-stagger="${staggerIndex}" style="transition-delay: ${staggerIndex * 50}ms;" role="button" tabindex="0" aria-label="${ariaLabel}">
+    ${cardBody}
   </div>
 `;
 };
@@ -161,14 +214,14 @@ const cardObserver = new IntersectionObserver(
       if (game == null) return;
       const staggerIndex = index % PAGE_SIZE;
       const html = renderCard(game, index, staggerIndex);
-      placeholder.insertAdjacentHTML('afterend', html);
+      placeholder.insertAdjacentHTML("afterend", html);
       const card = placeholder.nextElementSibling;
       cardObserver.unobserve(placeholder);
       placeholder.remove();
-      requestAnimationFrame(() => card.classList.add('card-visible'));
+      requestAnimationFrame(() => card.classList.add("card-visible"));
     });
   },
-  { rootMargin: '80px' }
+  { rootMargin: "80px" },
 );
 
 let sentinelObserver = null;
@@ -176,29 +229,29 @@ sentinelObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
-      const container = document.getElementById('container');
+      const container = document.getElementById("container");
       loadMore(container);
     });
   },
-  { rootMargin: '200px', threshold: 0 }
+  { rootMargin: "200px", threshold: 0 },
 );
 
 function handleCardActivation(card) {
   if (!card) return;
-  card.classList.toggle('card-flipped');
+  card.classList.toggle("card-flipped");
 }
 
 function setupCardFlip() {
-  const container = document.getElementById('container');
+  const container = document.getElementById("container");
   if (!container) return;
-  container.addEventListener('click', (e) => {
-    const card = e.target.closest('.game-card');
+  container.addEventListener("click", (e) => {
+    const card = e.target.closest(".game-card");
     handleCardActivation(card);
   });
-  container.addEventListener('keydown', (e) => {
-    const card = e.target.closest('.game-card');
+  container.addEventListener("keydown", (e) => {
+    const card = e.target.closest(".game-card");
     if (!card) return;
-    if (e.key === 'Enter' || e.key === ' ') {
+    if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       handleCardActivation(card);
     }

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
       rel="stylesheet"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <noscript>
       <link
@@ -31,6 +31,192 @@
   </head>
 
   <body>
+    <svg
+      class="platinum-svg-defs"
+      width="0"
+      height="0"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        <filter
+          id="turbulent-displace"
+          color-interpolation-filters="sRGB"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+        >
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.02"
+            numOctaves="10"
+            result="noise1"
+            seed="1"
+          />
+          <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+            <animate
+              attributeName="dy"
+              values="700; 0"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.02"
+            numOctaves="10"
+            result="noise2"
+            seed="1"
+          />
+          <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+            <animate
+              attributeName="dy"
+              values="0; -700"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.02"
+            numOctaves="10"
+            result="noise3"
+            seed="2"
+          />
+          <feOffset in="noise3" dx="0" dy="0" result="offsetNoise3">
+            <animate
+              attributeName="dx"
+              values="490; 0"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.02"
+            numOctaves="10"
+            result="noise4"
+            seed="2"
+          />
+          <feOffset in="noise4" dx="0" dy="0" result="offsetNoise4">
+            <animate
+              attributeName="dx"
+              values="0; -490"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+          <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+          <feBlend
+            in="part1"
+            in2="part2"
+            mode="color-dodge"
+            result="combinedNoise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="combinedNoise"
+            scale="18"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+        </filter>
+        <filter
+          id="turbulent-displace-card"
+          color-interpolation-filters="sRGB"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+        >
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.03"
+            numOctaves="8"
+            result="noise1"
+            seed="1"
+          />
+          <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+            <animate
+              attributeName="dy"
+              values="90; 35; 90"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.03"
+            numOctaves="8"
+            result="noise2"
+            seed="1"
+          />
+          <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+            <animate
+              attributeName="dy"
+              values="35; 90; 35"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.03"
+            numOctaves="8"
+            result="noise3"
+            seed="2"
+          />
+          <feOffset in="noise3" dx="0" dy="0" result="offsetNoise3">
+            <animate
+              attributeName="dx"
+              values="70; 28; 70"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feTurbulence
+            type="turbulence"
+            baseFrequency="0.03"
+            numOctaves="8"
+            result="noise4"
+            seed="2"
+          />
+          <feOffset in="noise4" dx="0" dy="0" result="offsetNoise4">
+            <animate
+              attributeName="dx"
+              values="28; 70; 28"
+              dur="6s"
+              repeatCount="indefinite"
+              calcMode="linear"
+            />
+          </feOffset>
+          <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+          <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+          <feBlend
+            in="part1"
+            in2="part2"
+            mode="color-dodge"
+            result="combinedNoise"
+          />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="combinedNoise"
+            scale="16"
+            xChannelSelector="R"
+            yChannelSelector="B"
+          />
+        </filter>
+      </defs>
+    </svg>
     <main>
       <h1 class="page-title">Beated Games</h1>
       <div id="container"></div>

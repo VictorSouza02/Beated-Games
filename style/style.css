@@ -8,6 +8,20 @@
   --angle: 90deg;
   --font-app: "DM Sans", system-ui, -apple-system, sans-serif;
   --font-beated: "Cinzel", Georgia, serif;
+  --electric-border-color: #dd8448;
+  --electric-light-color: #e8a060;
+  --electric-gradient-color: rgba(221, 132, 72, 0.4);
+  --electric-neutral-900: #1a1a1a;
+}
+
+@supports (color: oklch(from #dd8448 l c h)) {
+  :root {
+    --electric-light-color: oklch(from var(--electric-border-color) l c h);
+    --electric-gradient-color: oklch(
+      from var(--electric-border-color) 0.3 calc(c / 2) h / 0.4
+    );
+    --electric-neutral-900: oklch(0.185 0 0);
+  }
 }
 
 body {
@@ -32,6 +46,7 @@ main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  overflow: visible;
 }
 
 .scroll-sentinel {
@@ -50,7 +65,6 @@ main {
 
 .game-card {
   aspect-ratio: 1 / 1.5;
-  perspective: 1000px;
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -81,6 +95,10 @@ main {
   box-sizing: border-box;
   text-align: left;
   letter-spacing: 0.05em;
+}
+
+.game-card:not(.game-card--platinum) {
+  perspective: 1000px;
 }
 
 .internal-card {
@@ -350,20 +368,185 @@ main {
   }
 }
 
+.platinum-svg-defs {
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.game-card--platinum {
+  --platinum-radius: 12px;
+  overflow: visible;
+  position: relative;
+}
+
+.game-card--platinum .platinum-shell {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--platinum-radius);
+  overflow: visible;
+  background: transparent;
+}
+
+.game-card--platinum .platinum-shell__bg-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--platinum-radius);
+  filter: blur(18px);
+  opacity: 0.4;
+  z-index: 0;
+  background: linear-gradient(
+    -30deg,
+    var(--electric-light-color),
+    transparent,
+    var(--electric-border-color)
+  );
+  pointer-events: none;
+}
+
+.game-card--platinum .platinum-shell__content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  border-radius: var(--platinum-radius);
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.game-card--platinum .platinum-shell__frame {
+  position: absolute;
+  inset: -14px;
+  z-index: 3;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.game-card--platinum .platinum-shell__glow {
+  position: absolute;
+  inset: 14px;
+  border-radius: var(--platinum-radius);
+  border: 2px solid rgba(221, 132, 72, 0.5);
+  box-sizing: border-box;
+  filter: blur(2px);
+  opacity: 0.85;
+}
+
+.game-card--platinum .platinum-shell__electric {
+  position: absolute;
+  inset: 14px;
+  border-radius: var(--platinum-radius);
+  border: 2px solid var(--electric-border-color);
+  box-sizing: border-box;
+  background: transparent;
+  filter: url(#turbulent-displace-card);
+  will-change: filter;
+}
+
+.game-card--platinum .internal-card {
+  width: 100%;
+  height: 100%;
+}
+
+.game-card--platinum .front-side,
+.game-card--platinum .back-side {
+  border-radius: var(--platinum-radius);
+  overflow: hidden;
+}
+
+.back-side-platinum {
+  position: relative;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: linear-gradient(
+    -30deg,
+    var(--electric-light-color),
+    var(--electric-border-color)
+  );
+  box-shadow:
+    0 0 16px rgba(221, 132, 72, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-side-platinum-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.2) 45%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0.2) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: beated-shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.back-side-platinum-badge {
+  position: relative;
+  font-family: var(--font-beated);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.back-side-platinum-date {
+  position: relative;
+  font-family: var(--font-beated);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.back-side-platinum-hours {
+  position: relative;
+  font-family: var(--font-beated);
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .game-card,
   .game-card.card-visible,
   .internal-card,
   .front-side,
   .back-side-beated,
-  .back-side-beated-shine {
-    animation: none;
-    transition-duration: 0.01ms;
+  .back-side-beated-shine,
+  .back-side-platinum-shine,
+  .platinum-svg-defs animate {
+    animation: none !important;
   }
   .back-side-beated {
     animation: none;
   }
-  .back-side-beated-shine {
+  .back-side-beated-shine,
+  .back-side-platinum-shine {
     animation: none;
   }
 }
@@ -421,7 +604,8 @@ main {
     padding: 20px 16px;
   }
 
-  .game-card:hover .internal-card {
+  .game-card:hover .internal-card,
+  .game-card--platinum:hover .internal-card {
     transform: rotateY(180deg);
   }
 
@@ -466,6 +650,31 @@ main {
   .back-side-beated-hours {
     font-size: 0.7rem;
   }
+
+  .game-card--platinum {
+    --platinum-radius: 14px;
+  }
+
+  .game-card--platinum .platinum-shell__frame {
+    inset: -16px;
+  }
+
+  .game-card--platinum .platinum-shell__glow,
+  .game-card--platinum .platinum-shell__electric {
+    inset: 16px;
+  }
+
+  .back-side-platinum-badge {
+    font-size: 0.72rem;
+  }
+
+  .back-side-platinum-date {
+    font-size: 0.85rem;
+  }
+
+  .back-side-platinum-hours {
+    font-size: 0.7rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -481,5 +690,18 @@ main {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     padding: 24px 20px;
+  }
+
+  .game-card--platinum {
+    --platinum-radius: 18px;
+  }
+
+  .game-card--platinum .platinum-shell__frame {
+    inset: -18px;
+  }
+
+  .game-card--platinum .platinum-shell__glow,
+  .game-card--platinum .platinum-shell__electric {
+    inset: 18px;
   }
 }

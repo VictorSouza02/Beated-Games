@@ -266,6 +266,10 @@
     "releaseDate": "14/01/2022",
     "beatDate": "02/2022",
     "beatHours": "19.3",
+    "platinum": {
+      "date": "06/2022",
+      "hours": "62"
+    },
     "banner": "media/games/god-of-war-banner.webp",
     "icon": "media/games/god-of-war-logo.webp"
   },
@@ -365,6 +369,10 @@
     "releaseDate": "28/03/2023",
     "beatDate": "04/2023",
     "beatHours": "9.7",
+    "platinum": {
+      "date": "05/2026",
+      "hours": "37"
+    },
     "banner": "media/games/the-last-of-us-part-i-banner.webp",
     "icon": "media/games/the-last-of-us-part-i-logo.webp"
   },
